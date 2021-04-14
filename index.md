@@ -1,0 +1,4 @@
+This website is work in progress.
+
+## Publication
+ * [HHSSW21] **_PrivateDrop: Practical Privacy-Preserving Authentication for Apple AirDrop_** by [Alexander Heinrich](https://www.informatik.tu-darmstadt.de/seemoo/team_seemoo/alexander_heinrich/alexander_heinrich.en.jsp), [Matthias Hollick](https://www.informatik.tu-darmstadt.de/seemoo/team_seemoo/matthias_hollick/index.en.jsp), [Thomas Schneider](https://encrypto.de/schneider), [Milan Stute](https://www.informatik.tu-darmstadt.de/seemoo/team_seemoo/milan_stute/milan_stute.en.jsp) and [Christian Weinert](https://encrypto.de/weinert) in [30. USENIX Security Symposium (USENIX Security'21)](https://www.usenix.org/conference/usenixsecurity21). Paper available as **[pre-print](https://www.usenix.org/system/files/sec21fall-heinrich.pdf)**. Implementation available on **[GitHub](https://github.com/seemoo-lab/privatedrop)**.
