@@ -38,7 +38,7 @@ The implementation of PrivateDrop is publicly available on [GitHub](https://gith
 
 ## Responsible Disclosure
 
-We informed Apple about the privacy issues in May 2019 via responsible disclosure and shared our PrivateDrop solution in October 2020. As of April 20, 2021, Apple has neither acknowledged the problem nor indicated that they are working on a solution.
+We informed Apple about the privacy issues in May 2019 via responsible disclosure and shared our PrivateDrop solution in October 2020. As of April 20, 2021, Apple has not indicated that they are working on a solution.
 
 This means **Apple users are still vulnerable to the outlined privacy attacks.** They can only protect themselves by disabling AirDrop discovery in the system settings and by refraining from opening the sharing pane.
 
