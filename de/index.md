@@ -1,7 +1,6 @@
 ---
 title: Breaking and Fixing Apple AirDrop
----
-
+---Diese Website ist auch [**auf Englisch**](https://privatedrop.github.io/) verfügbar.
 ## AirDrop Einmaleins
 
 Apple AirDrop ist ein Dienst zum Teilen von Dateien, der es Nutzer\*innen ermöglicht, Photos und andere Medien über eine direkte Wi-Fi-Verbindung von einem Apple-Gerät zum anderen zu übertragen. Da Nutzer\*innen sensible Daten üblicherweise nur mit Personen teilen, die sie bereits kennen, zeigt AirDrop standardmäßig nur Empfänger aus dem Adressbuch an. Um zu bestimmen, ob die jeweils andere Partei ein bekannter Kontakt ist, nutzt AirDrop einen gegenseitigen Authentifizierungsmechanismus, der die Telefonnummer und Email-Adresse eines Nutzers bzw. einer Nutzerin mit Einträgen des Adressbuchs der anderen Partei abgleicht.
