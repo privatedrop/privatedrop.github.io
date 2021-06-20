@@ -4,6 +4,12 @@ title: Breaking and Fixing Apple AirDrop
 
 This website is also available [**in German**]({% link de/index.md %}).
 
+## News
+
+### AirDrop Vulnerabilities in the News
+
+See [**https://owlink.org/press**](https://owlink.org/press) and [**https://encrypto.de/news/privatedrop**](https://encrypto.de/news/privatedrop) for press reviews.
+
 ## AirDrop Primer
 
 Apple AirDrop is a file-sharing service that allows users to send photos and other media over a direct Wi-Fi connection from one Apple device to another. As people typically want to share sensitive data exclusively with people they know, AirDrop only shows receiver devices from address book contacts by default. To determine whether the other party is a contact, AirDrop uses a mutual authentication mechanism that compares a user's phone number and email address with entries in the other user's address book.
