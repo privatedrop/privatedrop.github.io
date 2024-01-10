@@ -6,7 +6,11 @@ Diese Website ist auch [**auf Englisch**]({% link index.md %}) verfügbar.
 
 ## Aktuelles
 
-### AirDrop Schwachstellen in den Schlagzeilen
+### 01/2024: Chinesisches Forensik-Institut Nutzt AirDrop Schwachstellen zur Identifizierung von Sendern "Unangemessener Informationen"
+
+Ein [forensisches Institut in Peking](https://sfj.beijing.gov.cn/sfj/sfdt/ywdt82/flfw93/436331732/index.html) und internationale Medien (z.B. [Bloomberg](https://www.bloomberg.com/news/articles/2024-01-09/china-says-cracked-apple-s-airdrop-to-identify-message-sources)) berichten, dass in China Schwachstellen in Apple's AirDrop Protokoll aktiv ausnutzt werden um Sender "unangemessener Informationen" zu identifizieren. Grundsätzlich basieren diese Angriff auf Apple's unsicherer Anwendung von Hash-Funktionen zur "Verschleierung" von Kontaktdaten während der Ausführung des AirDrop Protokolls - eine massive Datenschutzlücke [über die wir Apple bereits in 2019 informiert haben](#responsible-disclosure). Für ihre Angriffe extrahieren die chinesischen Forensikexperten die gehashten Kontaktdaten der Sender aus Logdateien von den Geräten der Empfänger. Durch die Anwendung von Methoden zum Umkehren von Hashwerten - basierend auf sogenannten Rainbow Tables (wie in unserem [Proof of Concept](#proof-of-concept-angriffe) beschrieben) - können sie die unverschlüsselten Kontaktdaten der Sender dann effizient ermitteln.
+
+### 04/2021: AirDrop Schwachstellen in den Schlagzeilen
 
 Pressespiegel befinden sich auf [**https://owlink.org/press**](https://owlink.org/press) und [**https://encrypto.de/news/privatedrop**](https://encrypto.de/news/privatedrop).
 
@@ -50,6 +54,7 @@ Wir haben Apple über die Datenschutzlücken im Mai 2019 mittels "Responsible Di
 
 Daher sind **Apple-Nutzer\*innen derzeit weiterhin anfällig für die genannten Angriffe.** Die einzige Möglichkeit sich zu schützen besteht derzeit darin, die AirDrop-Erkennung in den Systemeinstellungen zu deaktivieren und davon abzusehen, das "Teilen"-Menü zu öffnen.
 
-## Publikation
+## Publikationen
 
-- [HHSSW21] **_PrivateDrop: Practical Privacy-Preserving Authentication for Apple AirDrop_** von [Alexander Heinrich](https://www.informatik.tu-darmstadt.de/seemoo/team_seemoo/alexander_heinrich/alexander_heinrich.en.jsp), [Matthias Hollick](https://www.informatik.tu-darmstadt.de/seemoo/team_seemoo/matthias_hollick/index.en.jsp), [Thomas Schneider](https://encrypto.de/schneider), [Milan Stute](https://www.informatik.tu-darmstadt.de/seemoo/team_seemoo/milan_stute/milan_stute.en.jsp) und [Christian Weinert](https://encrypto.de/weinert) in [30th USENIX Security Symposium (USENIX Security'21)](https://www.usenix.org/conference/usenixsecurity21). Paper verfügbar als **[pre-print](https://www.usenix.org/system/files/sec21fall-heinrich.pdf)**. Implementierung verfügbar auf **[GitHub](https://github.com/seemoo-lab/privatedrop)**. Proof-of-Concept Angriffe verfügbar auf **[GitHub](https://github.com/seemoo-lab/opendrop/blob/poc-phonenumber-leak/README.PoC.md)**.
+- [HHSSW21a] **_PrivateDrop: Practical Privacy-Preserving Authentication for Apple AirDrop_** von [Alexander Heinrich](https://www.seemoo.tu-darmstadt.de/team/aheinrich/), [Matthias Hollick](https://www.seemoo.tu-darmstadt.de/team/mhollick/), [Thomas Schneider](https://encrypto.de/schneider), [Milan Stute](https://www.seemoo.tu-darmstadt.de/team/mschmittner/) und [Christian Weinert](https://encrypto.de/weinert) in [30th USENIX Security Symposium (USENIX Security'21)](https://www.usenix.org/conference/usenixsecurity21). Paper verfügbar als **[pre-print](https://www.usenix.org/system/files/sec21-heinrich.pdf)**. Implementierung verfügbar auf **[GitHub](https://github.com/seemoo-lab/privatedrop)**.
+- [HHSSW21b] **_AirCollect: Efficiently Recovering Hashed Phone Numbers Leaked via Apple AirDrop_** von [Alexander Heinrich](https://www.seemoo.tu-darmstadt.de/team/aheinrich/), [Matthias Hollick](https://www.seemoo.tu-darmstadt.de/team/mhollick/), [Thomas Schneider](https://encrypto.de/schneider), [Milan Stute](https://www.seemoo.tu-darmstadt.de/team/mschmittner/) und [Christian Weinert](https://encrypto.de/weinert) in [14th ACM Conference on Security and Privacy in Wireless and Mobile Networks (WiSec'21)](https://sites.nyuad.nyu.edu/wisec21/call-for-posters-and-demos/). Paper verfügbar als **[pre-print](https://eprint.iacr.org/2021/893)**. Proof-of-Concept Angriffe verfügbar auf **[GitHub](https://github.com/seemoo-lab/opendrop/blob/poc-phonenumber-leak/README.PoC.md)**.
