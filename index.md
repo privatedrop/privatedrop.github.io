@@ -38,9 +38,13 @@ AirDrop receivers present their (hashed) contact identifiers in response to the 
 
 Importantly, the malicious sender does not have to know the receiver: A popular person within a certain context (e.g., the manager of a company) can exploit this design flaw to learn all (private) contact identifiers of other people who have the popular person in their address book (e.g., employees of the company).
 
+### Vulnerability #3: Log File Leakage
+
+A [forensic institute in Beijing](https://sfj.beijing.gov.cn/sfj/sfdt/ywdt82/flfw93/436331732/index.html) in January 2024 reported that log files on Apple devices retain information related to AirDrop interactions, including the hashed contact identifiers of users who transferred files to the inspected device. We verified that log files containing this information can be obtained using Apple's [Sysdiagnose](https://it-training.apple.com/tutorials/support/sup075) feature. This only requires the device to be unlocked. Notably, the log files store partial instead of full hash values (40 bit per hash to be precise). Applying hash reversal attacks on such partial hashes can result in finding a few collisions, i.e., multiple phone numbers or email addresses that produce the same partial hash value.
+
 ### Proof-of-Concept Attacks
 
-We demonstrate attacks exploiting the two vulnerabilities with a proof-of-concept implementation that is publicly available on [GitHub](https://github.com/seemoo-lab/opendrop/blob/poc-phonenumber-leak/README.PoC.md). It combines the efforts of [OpenDrop](https://github.com/seemoo-lab/opendrop), an open-source AirDrop implementation, with [RainbowPhones](https://github.com/contact-discovery/rt_phone_numbers), an open-source hash cracking utility that is optimized for non-uniform input domains such as mobile phone numbers.
+We demonstrate attacks exploiting the first two vulnerabilities with a proof-of-concept implementation that is publicly available on [GitHub](https://github.com/seemoo-lab/opendrop/blob/poc-phonenumber-leak/README.PoC.md). It combines the efforts of [OpenDrop](https://github.com/seemoo-lab/opendrop), an open-source AirDrop implementation, with [RainbowPhones](https://github.com/contact-discovery/rt_phone_numbers), an open-source hash cracking utility that is optimized for non-uniform input domains such as mobile phone numbers.
 
 ## Our Solution: PrivateDrop
 

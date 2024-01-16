@@ -38,9 +38,13 @@ AirDrop Empfänger geben ihre (gehashten) Kontaktdaten als Antwort auf die initi
 
 Dabei ist wichtig zu beachten, dass ein bösartiger Sender den Empfänger nicht mal kennen muss: eine populäre Person innerhalb eines bestimmten Kontextes (beispielsweise Geschäftsführer einer Firma) kann dieses Problem ausnutzen, um an alle (privaten) Kontaktdaten anderer Menschen zu gelangen, die die populäre Person in ihrem Adressbuch gespeichert haben (beispielsweise Angestellte der Firma).
 
+### Schwachstelle #3: Logdateien geben Kontaktdaten preis
+
+Ein [forensisches Institut in Peking](https://sfj.beijing.gov.cn/sfj/sfdt/ywdt82/flfw93/436331732/index.html) hat im Januar 2024 berichtet, dass Logdateien auf Apple-Geräten Informationen zu AirDrop-Interaktionen speichern, inklusive der gehashten Kontaktdaten von Nutzer\*innen die Dateien an das untersuchte Gerät gesendet haben. Wir haben verifiziert, dass es über Apple's [Sysdiagnose](https://it-training.apple.com/tutorials/support/sup075)-Feature möglich ist, an Logdateien mit diesen Informationen zu gelangen. Dies erfordert nur, dass das Gerät entsperrt ist. Erwähnenswert in diesem Kontext ist, dass die Logdateien partielle und nicht vollständige Hashwerte speichern (40 bit pro Hash genaugenommen). Die Anwendung von Methoden zum Umkehren von Hashwerten kann daher vereinzelt Kollisionen hervorbringen, d.h., mehrere Telefonnummern oder Email-Adressen die den gleichen partiellen Hashwert erzeugen.
+
 ### Proof-of-Concept Angriffe
 
-Wir demonstrieren die Angriffe zum Ausnutzen der beiden Schwachstellen mit einer Proof-of-Concept-Implementierung die öffentlich auf [GitHub](https://github.com/seemoo-lab/opendrop/blob/poc-phonenumber-leak/README.PoC.md) verfügbar ist. Die Implementierung kombiniert [OpenDrop](https://github.com/seemoo-lab/opendrop), einer Open-Source Implementierung von AirDrop, mit [RainbowPhones](https://github.com/contact-discovery/rt_phone_numbers), einem Open-Source Cracking-Tool das auf das Finden von Telefonnummern optimiert ist.
+Wir demonstrieren die Angriffe zum Ausnutzen der ersten beiden Schwachstellen mit einer Proof-of-Concept-Implementierung die öffentlich auf [GitHub](https://github.com/seemoo-lab/opendrop/blob/poc-phonenumber-leak/README.PoC.md) verfügbar ist. Die Implementierung kombiniert [OpenDrop](https://github.com/seemoo-lab/opendrop), einer Open-Source Implementierung von AirDrop, mit [RainbowPhones](https://github.com/contact-discovery/rt_phone_numbers), einem Open-Source Cracking-Tool das auf das Finden von Telefonnummern optimiert ist.
 
 ## Unsere Lösung: PrivateDrop
 
